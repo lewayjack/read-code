@@ -1,0 +1,33 @@
+{
+    // Place your 全局 snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+    // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+    // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+    // used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+    // Placeholders with the same ids are connected.
+    // Example:
+    "创建XE2响应式变量": {
+        "scope": "javascript, typescript",
+        "prefix": "xe2var",
+        "body": [
+            "// 操作说明:1 输入变量名 2 输入类型信息 3 输入默认值  tab进入下一个输入项",
+            "// import { react } from \"xbsj-base\";",
+            "private _${1:myVar} = this.disposeVar(react<${2:boolean|undefined}>(${3:undefined}));",
+            "get $1() { return this._$1.value; }",
+            "set $1(value: $2) { this._$1.value = value; }",
+            "get $1Changed() { return this._$1.changed; }",
+        ],
+        "description": "创建XE2响应式变量"
+    },
+    "创建XE2响应式事件": {
+        "scope": "javascript, typescript",
+        "prefix": "xe2event",
+        "body": [
+            "// import { Event } from \"xbsj-base\";",
+            "private _$1Event = this.disposeVar(new Event());",
+            "get $1Event() { return this._$1Event; }",
+            "$1() { this._$1Event.emit(); }",
+        ],
+        "description": "创建XE2响应式事件"
+    }
+}

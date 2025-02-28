@@ -1,0 +1,1 @@
+export declare function cesiumFixGoogleEarth(Cesium: any): void;

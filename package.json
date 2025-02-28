@@ -1,0 +1,19 @@
+{
+  "name": "monorepo-xe2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev-app2": "pnpm --filter app2 dev",
+    "dev-app1": "pnpm --filter app1 dev",
+    "cleanall": "pnpm recursive exec -- rimraf node_modules && rimraf node_modules"
+  },
+  "dependencies": {
+    "earthsdk3-cesium": "workspace:^",
+    "earthsdk3-ue": "workspace:^",
+    "earthsdk3": "workspace:^",
+    "earthsdk3-assets": "workspace:^"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.10"
+  }
+}
